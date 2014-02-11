@@ -1,0 +1,17 @@
+    public void register«Caret»«FieldStart»«Link(MyAction)»«FieldEnd»«BlockAnchor»()
+    {
+        DevExpress.CodeRush.Core.Action «Link(MyAction)» = new DevExpress.CodeRush.Core.Action(components);
+        ((System.ComponentModel.ISupportInitialize)(«Link(MyAction)»)).BeginInit();
+        «Link(MyAction)».ActionName = "«Field(ActionName)»"; 
+        «Link(MyAction)».ButtonText = "«Field(ButtonName)»"; // Used if button is placed on a menu.
+        «Link(MyAction)».RegisterInCR = true;
+        «Link(MyAction)».Execute += «Link(MyAction)»_Execute;
+        ((System.ComponentModel.ISupportInitialize)(«Link(MyAction)»)).EndInit();
+    }
+    private void «Link(MyAction)»_Execute(ExecuteEventArgs ea)
+    {
+        // This method is executed when your action is called.
+        // Remember you must bind your action to a shortcut in order to use it.
+        // Shortcuts are created\altered using the IDE\Shortcuts option page 
+        «Target»
+    }
