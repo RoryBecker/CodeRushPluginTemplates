@@ -1,3 +1,8 @@
+LOCATION
+    Custom\Plugins\NewAction
+CONTEXT
+    (InheritsFrom(DevExpress.CodeRush.PlugInCore.StandardPlugIn) and OnEmptyLine)
+DEFINITION
     public void register«Caret»«FieldStart»«Link(MyAction)»«FieldEnd»«BlockAnchor»()
     {
         DevExpress.CodeRush.Core.Action «Link(MyAction)» = new DevExpress.CodeRush.Core.Action(components);
