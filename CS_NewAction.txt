@@ -13,5 +13,5 @@
         // This method is executed when your action is called.
         // Remember you must bind your action to a shortcut in order to use it.
         // Shortcuts are created\altered using the IDE\Shortcuts option page 
-        «Target»
+        «FinalTarget»
     }

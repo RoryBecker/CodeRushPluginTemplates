@@ -76,7 +76,7 @@
 <a2:ArrayList id="ref-20" xmlns:a2="http://schemas.microsoft.com/clr/ns/System.Collections">
 <_items href="#ref-21"/>
 <_size>1</_size>
-<_version>41</_version>
+<_version>1</_version>
 </a2:ArrayList>
 <SOAP-ENC:Array id="ref-21" SOAP-ENC:arrayType="xsd:anyType[4]">
 <item href="#ref-22"/>
@@ -98,7 +98,7 @@
 <a2:ArrayList id="ref-25" xmlns:a2="http://schemas.microsoft.com/clr/ns/System.Collections">
 <_items href="#ref-26"/>
 <_size>1</_size>
-<_version>8</_version>
+<_version>4</_version>
 </a2:ArrayList>
 <SOAP-ENC:Array id="ref-26" SOAP-ENC:arrayType="xsd:anyType[4]">
 <item href="#ref-27"/>
@@ -119,7 +119,7 @@
         // This method is executed when your action is called.
         // Remember you must bind your action to a shortcut in order to use it.
         // Shortcuts are created\altered using the IDE\Shortcuts option page 
-        «Target»
+        «FinalTarget»
 		}</_Expansion>
 <_IsExpression>false</_IsExpression>
 <_SuppressLastChar>false</_SuppressLastChar>
