@@ -1,0 +1,26 @@
+LOCATION
+    Custom\Plugins\NewRefactoring
+CONTEXT
+    (InheritsFrom(DevExpress.CodeRush.PlugInCore.StandardPlugIn) and OnEmptyLine)
+DEFINITION
+«AddAssemblyReference(DevExpress.Refactor.Core)»«AddNamespace(DevExpress.Refactor)»
+    public void register«Caret»«FieldStart»«Link(MyRefactoring)»«FieldEnd»«BlockAnchor»()
+    {
+        DevExpress.Refactor.Core.RefactoringProvider «Link(MyRefactoring)» = new DevExpress.Refactor.Core.RefactoringProvider(components);
+        ((System.ComponentModel.ISupportInitialize)(«Link(MyRefactoring)»)).BeginInit();
+        «Link(MyRefactoring)».ProviderName = "«Field(RefactoringProviderName)»"; // Should be Unique
+        «Link(MyRefactoring)».DisplayName = "«Field(Display Name)»";
+        «Link(MyRefactoring)».CheckAvailability += «Link(MyRefactoring)»_CheckAvailability;
+        «Link(MyRefactoring)».Apply += «Link(MyRefactoring)»_Execute;
+        ((System.ComponentModel.ISupportInitialize)(«Link(MyRefactoring)»)).EndInit();
+    }
+    private void «Link(MyRefactoring)»_CheckAvailability(Object sender, CheckContentAvailabilityEventArgs ea)
+    {
+        // This method is executed when the system checks the availability of your Refactoring.
+        ea.Available = true; // Change this to return true, only when your refactoring should be available.
+    }
+    private void «Link(MyRefactoring)»_Execute(Object sender, ApplyContentEventArgs ea)
+    {
+        // This method is executed when the system executes your refactoring 
+        «Target»
+    }

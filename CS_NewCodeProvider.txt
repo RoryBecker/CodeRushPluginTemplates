@@ -1,0 +1,28 @@
+LOCATION
+    Custom\Plugins\NewCodeProvider
+CONTEXT
+    (InheritsFrom(DevExpress.CodeRush.PlugInCore.StandardPlugIn) and OnEmptyLine)
+DEFINITION
+
+public void register«Caret»«FieldStart»«Link(MyCodeProvider)»«FieldEnd»«BlockAnchor»()
+{
+    DevExpress.CodeRush.Core.CodeProvider «Link(MyCodeProvider)» = new DevExpress.CodeRush.Core.CodeProvider(components);
+    ((System.ComponentModel.ISupportInitialize)(«Link(MyCodeProvider)»)).BeginInit();
+    «Link(MyCodeProvider)».ProviderName = "«Field(CodeProviderName)»"; // Should be Unique
+    «Link(MyCodeProvider)».DisplayName = "«Field(Display Name)»";
+    «Link(MyCodeProvider)».CheckAvailability += «Link(MyCodeProvider)»_CheckAvailability;
+    «Link(MyCodeProvider)».Apply += «Link(MyCodeProvider)»_Apply;
+    ((System.ComponentModel.ISupportInitialize)(«Link(MyCodeProvider)»)).EndInit();
+}
+private void «Link(MyCodeProvider)»_CheckAvailability(Object sender, CheckContentAvailabilityEventArgs ea)
+{
+    // This method is executed when the system checks the availability of your Code.
+    ea.Available = true; // Change this to return true, only when your Code should be available.
+}
+
+private void «Link(MyCodeProvider)»_Apply(Object sender, ApplyContentEventArgs ea)
+{
+    // This method is executed when the system executes your Code 
+    «Target»
+}
+
