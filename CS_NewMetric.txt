@@ -1,0 +1,20 @@
+LOCATION
+    Custom\Plugins\NewMetric
+CONTEXT
+    (InheritsFrom(DevExpress.CodeRush.PlugInCore.StandardPlugIn) and OnEmptyLine)
+DEFINITION
+private void register«Caret»«FieldStart»«Link(MyMetric)»«FieldEnd»«BlockAnchor»()
+{
+    var «Link(MyMetric)» = new DevExpress.CodeRush.Extensions.CodeMetricProvider(components);
+    ((System.ComponentModel.ISupportInitialize)(«Link(MyMetric)»)).BeginInit();
+    «Link(MyMetric)».ProviderName = "«Field(CodeMetricProviderName)»"; // Should be Unique
+    «Link(MyMetric)».DisplayName = "«Field(DisplayName)»";
+    «Link(MyMetric)».GetMetricValue += «Link(MyMetric)»_GetMetricValue;
+    ((System.ComponentModel.ISupportInitialize)(«Link(MyMetric)»)).EndInit();
+}
+private void «Link(MyMetric)»_GetMetricValue(Object sender, DevExpress.CodeRush.Extensions.GetMetricValueEventArgs ea)
+{
+    // This method is executed when your Metric is calculated.
+    // Use it to set e.Value based on a calculation involving e.LanguageElement 
+		«FinalTarget»
+}
