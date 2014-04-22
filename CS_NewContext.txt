@@ -1,0 +1,22 @@
+LOCATION
+    Custom\Plugins\NewContext
+CONTEXT
+    (InheritsFrom(DevExpress.CodeRush.PlugInCore.StandardPlugIn) and OnEmptyLine)
+DEFINITION
+«AddAssemblyReference(DevExpress.CodeRush.Extensions.dll)»
+private void register«Caret»«FieldStart»«Link(MyContext)»«FieldEnd»«BlockAnchor»()
+{    
+    var «Link(MyContext)» = new DevExpress.CodeRush.Extensions.ContextProvider(components);
+    ((System.ComponentModel.ISupportInitialize)(«Link(MyContext)»)).BeginInit();
+    «Link(MyContext)».Description = "«Field(Description)»";
+    «Link(MyContext)».ProviderName = "«Field(ProviderName)»"; // Should be Unique
+    «Link(MyContext)».Register = true;
+    «Link(MyContext)».ContextSatisfied += «Link(MyContext)»_ContextSatisfied;
+    ((System.ComponentModel.ISupportInitialize)(«Link(MyContext)»)).EndInit();
+}
+private void «Link(MyContext)»_ContextSatisfied(DevExpress.CodeRush.Core.ContextSatisfiedEventArgs ea)
+{
+    // This event fires whenever the context needs to be judged to be either satisfied or not.
+    ea.Satisfied = true; // Judge if context is satisfied.
+    «FinalTarget»
+}
